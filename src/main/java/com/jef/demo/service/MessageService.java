@@ -10,8 +10,13 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class MessageService {
 
+
     @Autowired
     private MessageRepository messageRepository;
+
+    public MessageService(MessageRepository messageRepository) {
+        this.messageRepository = messageRepository;
+    }
 
     @Transactional
     public Message insertRandomExtensionMessage(Message message) {
