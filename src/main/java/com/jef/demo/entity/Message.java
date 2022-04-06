@@ -6,11 +6,10 @@ import javax.persistence.*;
 
 
 @Entity
-@Table(name = "message")
 @Data
 public class Message {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "CUST_SEQ")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String text;
